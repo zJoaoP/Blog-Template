@@ -13,6 +13,7 @@ export default function App() {
   return (
     <div id="app-wrapper">
       <GlobalStyle />
+      <h1>Hello, world!</h1>
     </div>
   );
 }
