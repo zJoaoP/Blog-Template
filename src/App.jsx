@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NotFound from 'views/NotFound';
 import Home from 'views/Home';
 
+import Header from 'components/Header/Header';
+
 import GlobalStyle from 'GlobalStyle';
 
 /*
@@ -18,6 +20,7 @@ export default function App() {
   return (
     <Router>
       <GlobalStyle />
+      <Header />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="*" component={NotFound} />
