@@ -1,5 +1,10 @@
 import React from 'react';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import NotFound from 'views/NotFound';
+import Home from 'views/Home';
+
 import GlobalStyle from 'GlobalStyle';
 
 /*
@@ -11,9 +16,12 @@ import GlobalStyle from 'GlobalStyle';
 
 export default function App() {
   return (
-    <div id="app-wrapper">
+    <Router>
       <GlobalStyle />
-      <h1>Hello, world!</h1>
-    </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
